@@ -1,1 +1,32 @@
+.cabecalho__container{ 
+    display:flex;
+    justify-content: space-between; /*Faz cada elemento ficar em seu devido lugar com espaçamento entre eles*/
+    align-items: center;/*Nesse caso, a propriedade faz alinhar os elementos no centro da nav, assim os elementos não ficam grudados no topo*/
+    position:fixed;/*Deixa a nav fixa na tela, assim quando faz o scroll a nav ainda aparece*/
+    top:0;
+}
+.cabecalho__pesquisar__item{
+    display:none; /*Aparecer apenas para versões maiores que mobile*/
+}
+.rodape__container{
+    display:flex;
+    /* flex-direction: column;  Os elementos que estão dentro do footer ficam em uma coluna
+    flex-wrap:wrap; As sections quebram conforme vai diminuindo o tamanho da tela */
+    flex-flow:column wrap; /*Propriedade para alipacar o wrap e também deixar as sections na direção de colunas*/
 
+}
+.superior__secao__container{
+    display:flex;
+    align-items: center;
+    white-space: nowrap;/*Formata as palavras de um jeito que uma fique ao lado da outra*/
+    overflow-x: scroll;/*Cria barra de rolagem*/
+    gap:15px; /*Cria um espaço entre os elementos*/
+}
+@media (min-width:834px){
+    .cabecalho__pesquisar__item{
+        display:block; /*O formulário aparece apenas para telas maiores que 834px*/
+    }
+    .rodape__container{
+        justify-content: space-between;/*Espaçamento entre as sections a partir de dispositivos tablets*/
+    }
+}
